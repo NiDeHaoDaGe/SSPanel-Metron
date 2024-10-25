@@ -28,7 +28,7 @@ class Password
             return false;
         }
         $subject = $_ENV['appName'] . '重置密码';
-        // 只使用当前页面的 URL
+        // 优先用当前页面的 URL
         $baseUrl = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : $_ENV['baseUrl'];
 
         // 生成重置链接
